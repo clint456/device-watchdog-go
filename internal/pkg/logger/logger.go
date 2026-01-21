@@ -1,4 +1,3 @@
-package logger
 /*******************************************************************************
  * Copyright 2019 Dell Inc.
  * Copyright (C) 2025 IOTech Ltd
