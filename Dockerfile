@@ -27,7 +27,7 @@ COPY --from=builder /device-demo-go/cmd/res /res
 
 RUN chmod -R 755 /res
 
-EXPOSE 59901 502
+EXPOSE 59911
 
 ENTRYPOINT ["/device-demo"]
 CMD ["-cp=keeper.http://edgex-core-keeper:59890", "--registry"]

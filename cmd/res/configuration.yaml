@@ -1,19 +1,13 @@
 Writable:
-  LogLevel: INFO
-  Reading:
-    ReadingUnits: true
-  Telemetry:
-    Metrics: 
-      # All service's custom metric names must be present in this list. All common metric names are in the Common Config
-      ReadCommandsExecuted: true
+  LogLevel: DEBUG
 Service:
   Host: "localhost"
-  Port: 59999 # Device service are assigned the 599xx range
-  StartupMsg: device simple started
+  Port: 59911 # Device service are assigned the 599xx range
+  StartupMsg: device demo started
 
 MessageBus:
   Optional:
-    ClientId: device-simple
+    ClientId: device-demo
 
 # Example overriding of Common Config settings
 Device:
@@ -21,14 +15,3 @@ Device:
   # These have common values (currently), but must be here for service local env overrides to apply when customized
   ProfilesDir: ./res/profiles
   DevicesDir: ./res/devices
-  # Only needed if device service implements auto provisioning
-  ProvisionWatchersDir: ./res/provisionwatchers
-  Discovery:
-    Enabled: false
-    Interval: "30s"
-# Example structured custom configuration
-SimpleCustom:
-  OnImageLocation: ./res/on.png
-  OffImageLocation: ./res/off.jpg
-  Writable:
-    DiscoverSleepDurationSecs: 3
