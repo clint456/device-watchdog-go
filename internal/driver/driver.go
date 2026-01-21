@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"device-watchdog-go/internal/pkg/logger"
+	"device-demo-go/internal/pkg/logger"
 
 	"github.com/edgexfoundry/device-sdk-go/v4/pkg/interfaces"
 	sdkModel "github.com/edgexfoundry/device-sdk-go/v4/pkg/models"

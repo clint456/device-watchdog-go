@@ -9,14 +9,14 @@ DOCKER_PLATFORM ?= linux/arm64
 VERSION := $(shell cat ./VERSION 2>/dev/null || echo 0.0.0)
 GIT_SHA := $(shell git rev-parse HEAD)
 REGISTRY := 172.16.19.76:5000
-IMAGE := device-watchdog
+IMAGE := device-demo
 BUILD_DATE := $(shell date +%Y-%m-%dT%H-%M-%SZ)
 
 # 构建标志
-MICROSERVICES := cmd/device-watchdog
+MICROSERVICES := cmd/device-demo
 SDKVERSION := $(shell cat ./go.mod | grep 'github.com/edgexfoundry/device-sdk-go/v4 v' | awk '{print $$2}')
 GOFLAGS := -ldflags "-s -w \
-	-X github.com/edgexfoundry/device-watchdog-go.Version=$(VERSION) \
+	-X github.com/edgexfoundry/device-demo-go.Version=$(VERSION) \
 	-X github.com/edgexfoundry/device-sdk-go/v4/internal/common.SDKVersion=$(SDKVERSION)" \
 	-trimpath -mod=readonly
 

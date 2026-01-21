@@ -7,17 +7,17 @@
 package main
 
 import (
-	watchdog "device-watchdog-go"
-	"device-watchdog-go/internal/driver"
+	demo "device-demo-go"
+	"device-demo-go/internal/driver"
 
 	"github.com/edgexfoundry/device-sdk-go/v4/pkg/startup"
 )
 
 const (
-	serviceName string = "device-watchdog"
+	serviceName string = "device-demo"
 )
 
 func main() {
 	sd := driver.NewProtocolDriver()
-	startup.Bootstrap(serviceName, watchdog.Version, sd)
+	startup.Bootstrap(serviceName, demo.Version, sd)
 }

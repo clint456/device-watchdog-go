@@ -1,4 +1,4 @@
-module device-watchdog-go
+module device-demo-go
 
 go 1.24.7
 
